@@ -1,10 +1,5 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 namespace infomcpe;
 
 use pocketmine\plugin\PluginBase;
@@ -51,9 +46,9 @@ class IParticle extends PluginBase implements Listener {
                    $this->getServer()->getPluginManager()->getPlugin("PluginDownloader")->installByID('SessionAPI');
                }
             }
-            $this->getServer()->getPluginManager()->registerEvents($this, $this);
+                        }
+	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
             $this->getServer()->getScheduler()->scheduleRepeatingTask(new ParticleTimer($this), 20*0.5);
-            }
    }
      public function onCommand(CommandSender $sender, Command $command, $label, array $args){
 		switch($command->getName()){
